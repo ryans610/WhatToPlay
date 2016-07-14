@@ -15,7 +15,7 @@ function loadData(){
 }
 
 function saveData(){
-    var data=Array.prototype.slice.call(list.getElementsByTagName("li")).map(function(game){
+    var data=Array.prototype.map.call(list.getElementsByTagName("li"),function(game){
         return game.innerText;
     }).join(",");
     console.log(data);
